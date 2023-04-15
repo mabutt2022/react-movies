@@ -5,9 +5,11 @@ export default function MovieCard(props) {
     return (
         <div>
             <Link to={`/movies/${props.movie.title}`}>
-                <div style={{ height: "300px", width: "300px", backgroundImage: `url(${image})`, objectFit: 'cover' }}>
-                    <div>{props.movie.title}</div><br />
-                    <div>{props.movie.releaseDate}</div>
+                <div className='item-card' style={{ height: "300px", width: "300px", backgroundImage: `url(${image})`, alignContent: 'center', backgroundRepeat: 'no-repeat' }}>
+                    <div>Title: {props.movie.title}
+                        <br />
+                        Release Date: {props.movie.releaseDate}
+                    </div>
                 </div>
             </Link>
             <hr />
